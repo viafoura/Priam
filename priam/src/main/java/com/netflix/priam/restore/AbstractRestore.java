@@ -85,6 +85,10 @@ public abstract class AbstractRestore extends Task implements IRestoreStrategy{
     }
 
     private final void download(Iterator<AbstractBackupPath> fsIterator, BackupFileType bkupFileType) throws Exception {
+        if ( !fsiIterator.hasNext() _ {
+            logger.debug("fsIterator has no next!")
+        }
+        })
         while (fsIterator.hasNext()) {
             AbstractBackupPath temp = fsIterator.next();
             if (temp.getType() == BackupFileType.SST && tracker.contains(temp))
