@@ -113,7 +113,6 @@ public abstract class AbstractRestore extends Task implements IRestoreStrategy{
             if ( temp.getKeyspace().equals(SYSTEM_KEYSPACE) ) {
                 logger.debug("temp.getKeyspace().equals(SYSTEM_KEYSPACE))");
             }
-            }
             if (config.getRestoreKeySpaces().size() != 0 && (!config.getRestoreKeySpaces().contains(temp.getKeyspace()) || temp.getKeyspace().equals(SYSTEM_KEYSPACE))) {
                 logger.info("Bypassing restoring file \"{}\" as it is system keyspace", temp.newRestoreFile());
                 continue;
