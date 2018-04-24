@@ -107,7 +107,7 @@ public abstract class AbstractRestore extends Task implements IRestoreStrategy{
             if (config.getRestoreKeySpaces().size() != 0) {
                 logger.debug(" (config.getRestoreKeySpaces().size() != 0" );
             }
-            if (!config.getRestoreKeySpaces().contains(temp.getKeyspace()) {
+            if (!config.getRestoreKeySpaces().contains(temp.getKeyspace()) ) {
                 logger.debug(" (!config.getRestoreKeySpaces().contains(temp.getKeyspace())");
             }
             if temp.getKeyspace().equals(SYSTEM_KEYSPACE) {
